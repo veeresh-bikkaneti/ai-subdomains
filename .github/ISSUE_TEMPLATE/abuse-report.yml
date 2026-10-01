@@ -1,0 +1,45 @@
+name: Report abuse
+description: Report spam, scams, impersonation or other policy violations on an is-ai.si subdomain.
+title: "[abuse] "
+labels: ["abuse"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Active phishing, malware or illegal content?** Please do **not** post it here. Use
+        [private reporting](https://github.com/veeresh-bikkaneti/ai-subdomains/security/advisories/new) or email `abuse@is-ai.si`
+        so we can act without advertising the site. This public form is for spam, impersonation, squatting and other policy issues.
+  - type: input
+    id: domain
+    attributes:
+      label: Which subdomain?
+      placeholder: bad-actor.is-ai.si
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: What kind of violation is it?
+      options:
+        - Spam / SEO farm
+        - Impersonation / brand abuse
+        - Squatting
+        - Scam or fraud (not actively phishing)
+        - Hate, harassment or other Code of Conduct issue
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Describe what you saw and when. Do not paste credentials or personal data.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I am reporting in good faith and the details above are accurate.
+          required: true

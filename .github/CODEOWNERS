@@ -1,0 +1,6 @@
+# Changes to the machinery need a maintainer; domain files only need any maintainer approval via branch protection.
+/.github/   @veeresh-bikkaneti
+/scripts/   @veeresh-bikkaneti
+/lib/       @veeresh-bikkaneti
+/config/    @veeresh-bikkaneti
+/test/      @veeresh-bikkaneti
