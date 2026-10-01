@@ -1,4 +1,8 @@
-# Changes to the machinery need a maintainer; domain files only need any maintainer approval via branch protection.
+# Every file needs review from a maintainer. Add more handles (or a team) on each line as the team grows.
+*           @veeresh-bikkaneti
+
+# The registry machinery: keep these explicit so they stay owned even if the catch-all above is relaxed
+# (for example to let a wider group approve domains/*.json).
 /.github/   @veeresh-bikkaneti
 /scripts/   @veeresh-bikkaneti
 /lib/       @veeresh-bikkaneti
