@@ -1,0 +1,16 @@
+{
+  "_comment": "Labels nobody can register. Maintainers may grant exceptions by editing this file in a PR.",
+  "labels": [
+    "www", "mail", "smtp", "imap", "pop", "pop3", "mx", "ns", "ns1", "ns2", "ns3", "dns",
+    "ftp", "sftp", "ssh", "vpn", "cdn", "api", "app", "apps", "dev", "test", "staging", "stage",
+    "prod", "production", "beta", "alpha", "demo", "docs", "doc", "blog", "status", "web", "git",
+    "github", "gitlab", "admin", "administrator", "root", "sudo", "system", "help", "support",
+    "contact", "info", "abuse", "security", "postmaster", "hostmaster", "webmaster", "noreply",
+    "no-reply", "billing", "legal", "privacy", "terms", "tos", "about", "login", "signin",
+    "signup", "register", "account", "accounts", "auth", "oauth", "sso", "secure", "dashboard",
+    "console", "portal", "cloud", "autodiscover", "autoconfig", "localhost", "wpad", "isatap",
+    "ai", "is-ai", "isai", "official", "team", "staff", "mod", "moderator", "maintainer",
+    "maintainers", "registry", "domains", "domain", "subdomain", "free", "internal", "intranet",
+    "owner", "null", "undefined", "example", "sample"
+  ]
+}

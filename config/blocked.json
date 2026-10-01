@@ -1,0 +1,13 @@
+{
+  "_comment": "Labels containing any of these substrings are rejected (impersonation / abuse bait). Keep entries 5+ chars where possible to limit false positives. A maintainer can approve an exception by editing this file.",
+  "substrings": [
+    "paypal", "stripe", "binance", "coinbase", "metamask", "blockchain-login", "walletconnect",
+    "openai", "chatgpt", "anthropic", "claude", "gemini", "google", "gmail", "microsoft",
+    "office365", "outlook", "icloud", "amazon", "netflix", "facebook", "instagram", "whatsapp",
+    "telegram", "twitter", "linkedin", "tiktok", "youtube", "cloudflare", "godaddy", "namecheap",
+    "banking", "bank-", "-bank", "verify-", "-verify", "secure-login", "-login", "login-",
+    "password", "passwd", "giveaway", "airdrop", "casino", "betting", "porn", "xxx", "escort",
+    "viagra", "cialis", "crack", "keygen", "warez", "torrent", "phish", "malware", "ransom",
+    "hacked", "hacker-for-hire", "carding", "cvv"
+  ]
+}
