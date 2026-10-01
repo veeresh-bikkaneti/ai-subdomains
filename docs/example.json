@@ -1,0 +1,10 @@
+{
+  "description": "My personal portfolio",
+  "owner": {
+    "username": "your-github-username",
+    "email": "optional-public-contact@example.com"
+  },
+  "records": {
+    "CNAME": "your-github-username.github.io"
+  }
+}

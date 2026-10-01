@@ -1,0 +1,14 @@
+{
+  "name": "is-ai-si-registry",
+  "version": "1.0.0",
+  "description": "Community-run free subdomain registry for is-ai.si, managed through pull requests and Cloudflare DNS.",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "test": "node --test \"test/*.test.js\"",
+    "deploy:dry": "node scripts/deploy.js --dry-run",
+    "deploy": "node scripts/deploy.js"
+  }
+}

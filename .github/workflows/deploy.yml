@@ -1,0 +1,44 @@
+name: Deploy DNS to Cloudflare
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 3 * * *' # daily re-sync repairs any manual drift in Cloudflare
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Only print the planned changes
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+# Never run two syncs at once, and never cancel one mid-flight.
+concurrency:
+  group: cloudflare-deploy
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Put CF_API_TOKEN / CF_ZONE_ID in this environment (Settings > Environments) rather than repo-wide secrets.
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - run: node scripts/validate.js
+      - name: Sync records
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then node scripts/deploy.js --dry-run; else node scripts/deploy.js; fi
